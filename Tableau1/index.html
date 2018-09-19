@@ -1,0 +1,89 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tableau JavaScript API </title>
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+
+
+
+    <script type="text/javascript" src="http://public.tableau.com/javascripts/api/tableau-2.min.js"></script>
+    <script type="text/javascript" src="script/BasicEmbd.js"></script>
+
+   
+
+</head>
+
+<body>
+
+    <div class='container'>
+        <div class='row'>
+            <div class='span3'><img src='images/logo.png'></div>
+            <h2 class='span7 pagination-centered'>JavaScript API Techniques</h2>
+
+
+        </div>
+        <div><h3 align="center" id='sheetName'></h3></div>
+        <div class='row'>
+            <ul id='menu' class='nav nav-list span2'>
+
+                <li class='nav-header'>Switching Views</li>
+                <br />
+
+
+                <li><a class="button alt" onClick="switchView('Stocks')">Stocks</a></li>
+                <br>
+                <li><a class="button alt" onClick="switchView('Storms')">Storms</a></li>
+                <br>
+                <li><a class="button alt" onClick="switchView('Obesity')">Obesity</a></li>
+                <br>
+                <li><a class="button alt" onClick="switchView('College')">College</a></li>
+                <br>
+                <li><a class="button alt" onClick="switchView('Flights')">Flights</a></li>
+                <br>
+                <li><a class="button alt" onClick="switchView('Economy')">Economy</a></li>
+                <br>
+                <li class='nav-header'>Filtering & Selecting Marks</li>
+
+                <div id="controls" style="padding:20px;">
+
+                    <select id="changeState" onchange="showFilter(value);">
+                        <option value="">States</option>
+                        <option value="Texas">Texas</option>
+                        <option value="Idaho">Idaho</option>
+                        <option value="Indiana">Indiana</option>
+                        <option value="Alabama">Alabama</option>
+                    </select>
+                </div>
+
+                <li><a onClick="selectMarks('College','Business')">Select Business Marks</a></li>
+
+                <li class='nav-header'>Async Programming</li>
+                <li><a class="button alt" onClick="problemExample()">Problem Example</a></li>
+                <li><a class="button alt" onClick="solution()">Solution to keeping specific filter </a></li>
+            </ul>
+
+            <div id='myViz'></div>
+
+        </div>
+
+    </div>
+    <ul><a href="#" class="button alt">Previous Viz</a></ul> <ul><a href="Background.html" class="button alt">Next Viz</a></ul>
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="copyright">
+            &copy; Untitled. All rights reserved. Images: <a href="http://unsplash.com">Unsplash</a>. Design: <a href="http://templated.co">TEMPLATED</a>.
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
